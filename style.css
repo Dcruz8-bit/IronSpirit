@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+header, footer {
+  background-color: #004466;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+a {
+  color: #ffee66;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+  background-color: #003344;
+  color: #fff;
+  outline: 2px solid #ffee66;
+}
+
+main {
+  padding: 2rem;
+}
