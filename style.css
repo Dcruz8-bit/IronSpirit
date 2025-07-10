@@ -187,3 +187,31 @@ figure figcaption {
   font-size: 0.95rem;
   margin-top: 0.5rem;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem auto;
+  font-size: 1rem;
+  background-color: #111;
+  color: #eee;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+thead th {
+  background-color: #222;
+  color: #f5e657;
+}
+
+caption {
+  caption-side: top;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #f5e657;
+}
