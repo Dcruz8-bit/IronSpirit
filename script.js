@@ -2,13 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   const nameField = document.getElementById("name");
   const emailField = document.getElementById("email");
+  const thankYou = document.getElementById("thank-you-message");
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent real submission
+    e.preventDefault();
 
     // Clear previous error states
     nameField.classList.remove("error");
     emailField.classList.remove("error");
+    thankYou.style.display = "none"; // Reset message
 
     // Basic validation
     const nameValid = nameField.value.trim() !== "";
@@ -18,7 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!emailValid) emailField.classList.add("error");
 
     if (nameValid && emailValid) {
-      form.innerHTML = `<p class="success-message">Thanks, ${nameField.value}! Your submission was received.</p>`;
+      thankYou.innerHTML = `✅ Thanks, ${nameField.value}! Someone will reach out to you soon.`;
+      thankYou.style.display = "block";
+      form.reset(); // Clear form fields
     }
   });
 });
