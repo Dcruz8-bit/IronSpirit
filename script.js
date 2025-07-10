@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clear previous error states
     nameField.classList.remove("error");
     emailField.classList.remove("error");
-    thankYou.style.display = "none"; // Reset message
+    thankYou.style.display = "none";
 
     // Basic validation
     const nameValid = nameField.value.trim() !== "";
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (nameValid && emailValid) {
       thankYou.innerHTML = `✅ Thanks, ${nameField.value}! Someone will reach out to you soon.`;
       thankYou.style.display = "block";
-      form.reset(); // Clear form fields
+      form.reset();
     }
   });
 });
