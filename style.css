@@ -199,13 +199,10 @@ footer a:focus {
 /* =====================
    💛 Founder Section
    ===================== */
-.founder-layout {
+.founder-layout figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 .founder-layout figure img {
