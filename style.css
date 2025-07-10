@@ -227,3 +227,14 @@ figure figcaption {
   color: #eee;
   font-size: 0.95rem;
 }
+
+.trainer-card img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 12px rgba(245, 230, 87, 0.2);
+}
+
