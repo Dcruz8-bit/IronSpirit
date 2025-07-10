@@ -3,7 +3,7 @@
    ===================== */
 body {
   font-family: 'Segoe UI', sans-serif;
-  font-size: 18px;               /* Accessibility: base font size */
+  font-size: 18px;
   line-height: 1.6;
   margin: 0;
   background-color: #111;
@@ -12,12 +12,34 @@ body {
 
 h1, h2 {
   color: #ffe600;
-  font-size: 24px;               /* Clear heading contrast */
+  font-size: 24px;
   margin-bottom: 0.5rem;
 }
 
 p {
   margin-bottom: 1rem;
+}
+
+/* =====================
+   🎯 Hero Header (Homepage only)
+   ===================== */
+.hero {
+  background: linear-gradient(135deg, #1a1a1a, #111);
+  padding: 3rem 2rem;
+  text-align: center;
+  border-bottom: 4px solid #ffe600;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #f5e657;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  color: #eee;
+  margin-bottom: 1.5rem;
 }
 
 /* =====================
@@ -36,6 +58,7 @@ nav ul {
   display: flex;
   gap: 2rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -152,18 +175,30 @@ footer a:focus {
     gap: 1rem;
   }
 
-  form {
-    width: 100%;
-  }
-
-  input, button {
+  form,
+  input,
+  button {
     width: 100%;
   }
 
   h1, h2 {
     font-size: 20px;
   }
+
+  .schedule-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trainer-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
+/* =====================
+   💛 Founder Section
+   ===================== */
 .founder-layout {
   display: flex;
   flex-direction: column;
@@ -188,6 +223,9 @@ figure figcaption {
   margin-top: 0.5rem;
 }
 
+/* =====================
+   🗓️ Program Schedule
+   ===================== */
 .schedule {
   max-width: 900px;
   margin: 2rem auto;
@@ -228,6 +266,26 @@ figure figcaption {
   font-size: 0.95rem;
 }
 
+/* =====================
+   🧑‍🏫 Trainer Cards
+   ===================== */
+.trainer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.trainer-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(245, 230, 87, 0.15);
+}
+
 .trainer-card img {
   max-width: 220px;
   width: 100%;
@@ -238,6 +296,25 @@ figure figcaption {
   box-shadow: 0 4px 12px rgba(245, 230, 87, 0.2);
 }
 
+.trainer-card h2 {
+  color: #ffe600;
+  margin-bottom: 0.3rem;
+}
+
+.trainer-card h3 {
+  color: #aaa;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.trainer-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+/* =====================
+   📝 Join Form Styling (join.html)
+   ===================== */
 .signup-form {
   max-width: 600px;
   margin: 2rem auto;
@@ -286,6 +363,9 @@ figure figcaption {
   background-color: #ffe600;
 }
 
+/* =====================
+   🙌 Why Join List
+   ===================== */
 .why-join {
   max-width: 600px;
   margin: 2rem auto;
@@ -307,4 +387,3 @@ figure figcaption {
   margin-bottom: 0.75rem;
   font-size: 1rem;
 }
-
