@@ -164,3 +164,18 @@ footer a:focus {
     font-size: 20px;
   }
 }
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 230, 0, 0.4);
+  display: block;
+  margin: 0 auto;
+}
+
+figure figcaption {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
