@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IronSpirit Gym</title>
+  <meta name="description" content="IronSpirit Gym – Strength training and community for lifters building legacy." />
+  <meta name="keywords" content="IronSpirit, gym, bodybuilding, hypertrophy, personal training, fitness, strength" />
+  <meta name="author" content="David Cruz" />
+  <meta property="og:title" content="IronSpirit Gym" />
+  <meta property="og:description" content="Forge your body. Steel your spirit. Join the IronSpirit movement." />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+
+<body id="top">
   <header>
     <h1>IronSpirit</h1>
     <p>Forge your body. Steel your spirit.</p>
-    <nav>
+    <nav aria-label="Main site navigation">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#programs">Programs</a></li>
@@ -23,7 +29,9 @@
   <main>
     <section id="about">
       <h2>About IronSpirit</h2>
-      <p>Founded by David Cruz, IronSpirit is a gym for lifters who are serious about sculpting strength and building legacy. We focus on hypertrophy training, advanced equipment, and community-driven grit.</p>
+      <p>
+        Founded by David Cruz, IronSpirit is a gym for lifters who are serious about sculpting strength and building legacy. We focus on hypertrophy training, advanced equipment, and community-driven grit.
+      </p>
     </section>
 
     <section id="programs">
@@ -38,25 +46,32 @@
 
     <section id="trainers">
       <h2>Meet Our Coaches</h2>
-      <p>Our trainers are certified bodybuilders and specialists in strength & conditioning. Every rep, set, and cue is rooted in science and experience.</p>
+      <p>
+        Our trainers are certified bodybuilders and specialists in strength & conditioning. Every rep, set, and cue is rooted in science and experience.
+      </p>
+      <img src="coach.jpg" alt="Coach demonstrating proper squat form" />
     </section>
 
     <section id="contact">
       <h2>Join the Movement</h2>
       <form>
-        <label for="name">Name:</label>
-        <input id="name" type="text" required />
+        <fieldset>
+          <legend>Sign Up</legend>
 
-        <label for="email">Email:</label>
-        <input id="email" type="email" required />
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" required placeholder="Enter your name" autocomplete="name" />
 
-        <button type="submit">Submit</button>
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required placeholder="Enter your email" autocomplete="email" />
+
+          <button type="submit">Submit</button>
+        </fieldset>
       </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 IronSpirit Gym. Built for the strong.</p>
+    <p>&copy; 2025 <a href="#top" aria-label="Back to top of page">IronSpirit Gym</a>. Built for the strong.</p>
   </footer>
 
   <script src="script.js"></script>
