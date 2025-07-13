@@ -7,12 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Clear previous error states
     nameField.classList.remove("error");
     emailField.classList.remove("error");
     thankYou.style.display = "none";
 
-    // Basic validation
     const nameValid = nameField.value.trim() !== "";
     const emailValid = emailField.value.includes("@");
 
