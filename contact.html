@@ -19,30 +19,38 @@
         <li><a href="about.html">About</a></li>
         <li><a href="programs.html">Programs</a></li>
         <li><a href="trainers.html">Trainers</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="signup-form">
-      <div id="thank-you-message" style="display: none; color: #00e676; font-weight: bold; margin-bottom: 1rem;"></div>
-      
-      <form>
+      <div id="success-message" style="display: none; color: #00e676; font-weight: bold; margin-bottom: 1rem;">
+         Thank you! Your sign-up was successfully submitted.
+      </div>
+
+      <form id="signup-form" novalidate>
         <fieldset>
           <legend>Sign Up</legend>
 
           <label for="name">Name:</label>
-<input id="name" name="name" type="text" required placeholder="Your full name" />
+          <input id="name" name="name" type="text" required placeholder="Your full name"
+            oninvalid="this.setCustomValidity('Please enter your full name.')"
+            oninput="this.setCustomValidity('')" />
 
-<label for="email">Email:</label>
-<input id="email" name="email" type="email" required placeholder="you@example.com" />
-
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com"
+            oninvalid="this.setCustomValidity('Please enter a valid email address.')"
+            oninput="this.setCustomValidity('')" />
 
           <label for="goals">What are your fitness goals?</label>
           <textarea id="goals" name="goals" rows="3" placeholder="Gain strength, lose fat, improve mobility..."></textarea>
 
           <label for="experience">Training Experience:</label>
-          <select id="experience" name="experience">
+          <select id="experience" name="experience" required
+            oninvalid="this.setCustomValidity('Please select your training experience.')"
+            oninput="this.setCustomValidity('')">
             <option value="">Select your level</option>
             <option value="new">New to training</option>
             <option value="intermediate">Been lifting 1–2 years</option>
@@ -50,7 +58,9 @@
           </select>
 
           <label for="program">Preferred Program:</label>
-          <select id="program" name="program">
+          <select id="program" name="program" required
+            oninvalid="this.setCustomValidity('Please choose a program.')"
+            oninput="this.setCustomValidity('')">
             <option value="">Choose your interest</option>
             <option value="strength">Strength Foundations</option>
             <option value="shred">Shred Protocol (HIIT)</option>
@@ -77,5 +87,21 @@
   <footer>
     <p>&copy; 2025 IronSpirit Gym. Your strength, our mission.</p>
   </footer>
+
+  <script>
+    const form = document.getElementById("signup-form");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (form.checkValidity()) {
+        successMessage.style.display = "block";
+        form.reset();
+      } else {
+        form.reportValidity();
+      }
+    });
+  </script>
 </body>
 </html>
