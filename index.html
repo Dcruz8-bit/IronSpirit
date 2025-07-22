@@ -84,5 +84,16 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('main-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', String(!expanded));
+    menu.hidden = expanded;
+  });
+</script>
+
 </body>
 </html>
