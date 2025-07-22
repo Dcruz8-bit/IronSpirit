@@ -126,8 +126,12 @@ nav a:focus {
   }
 
   nav ul {
-    display: none;
-  }
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 }
 
 main {
