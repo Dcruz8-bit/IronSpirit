@@ -384,3 +384,32 @@ figure figcaption {
   padding: 0.75rem;
   font-weight: bold;
   border-radius: 6px;
+
+  .program-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(245, 230, 87, 0.15);
+}
+
+.card h3 {
+  color: #f5e657;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
