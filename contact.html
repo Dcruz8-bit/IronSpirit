@@ -95,19 +95,30 @@
   </footer>
 
   <script>
-    const form = document.getElementById("signup-form");
-    const successMessage = document.getElementById("success-message");
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('main-menu');
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  toggleBtn?.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', String(!expanded));
+    menu.hidden = expanded;
+  });
 
-      if (form.checkValidity()) {
-        successMessage.style.display = "block";
-        form.reset();
-      } else {
-        form.reportValidity();
-      }
-    });
-  </script>
+  const form = document.getElementById("signup-form");
+  const successMessage = document.getElementById("success-message");
+
+  form?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (form.checkValidity()) {
+      successMessage.style.display = "block";
+      form.reset();
+    } else {
+      form.reportValidity();
+    }
+  });
+</script>
+</body>
+</html>
+
 </body>
 </html>
