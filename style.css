@@ -388,7 +388,7 @@ figure figcaption {
   border-radius: 6px;
 }
 
-.program-grid {
+.program-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
