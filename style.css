@@ -435,4 +435,15 @@ figure figcaption {
   background-color: #eee;
   font-weight: bold;
 }
+/* Updated schedule table styles */
+.schedule-table td {
+  color: #ffe600; /* bold yellow for contrast */
+  background-color: #1a1a1a; /* sleek dark backdrop */
+}
+
+.schedule-table th {
+  background-color: #222; /* subtle dark header */
+  color: #ffe600;
+  font-weight: bold;
+}
 
