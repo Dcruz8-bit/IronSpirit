@@ -418,3 +418,21 @@ figure figcaption {
 .card:hover {
   transform: translateY(-5px);
 }
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.schedule-table th, .schedule-table td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.schedule-table th {
+  background-color: #eee;
+  font-weight: bold;
+}
+
